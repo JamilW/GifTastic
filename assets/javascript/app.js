@@ -1,5 +1,4 @@
 var topics = ["Spider-Man", "The Incredible Hulk", "Captain America", "Thor", "Ant Man", "Black Widow", "Iron Man", "Hawkeye", "Wolverine", "Deadpool", "Scarlet Witch", "Doctor Strange", "Silver Surfer", "Luke Cage", "Nick Fury", "Doctor Doom", "Star Lord", "The Punisher", "Daredevil", "Thanos"];
-var gifImages = 10;
 
 function topic()    {
     $("#buttons").empty();
@@ -27,38 +26,33 @@ function topic()    {
             url: queryUrl,
             method: "GET"
         }).then(function(response) {
-            // console.log(JSON.stringify(response));
             var results = response.data;
 
-           for(var i = 0; i < results.length; i++)   {
-               
+            for(var i = 0; i < results.length; i++)   {
                 var rating = results[i].rating;
                 var image = results[i].images.fixed_height_small_still.url;
-
+        
                 var marvelDiv = $("<div class='marvel-gif'>");
                 var ratingEl = $("<p>").text("Rating: " + rating);
                 var imageEl = $("<img height='200' width='200' class='gif'>").attr("src", image);
-               
+
+                imageEl.attr("data-state", "still");
+                imageEl.attr("data-still", results[i].images.fixed_height_small_still.url);
+                imageEl.attr("data-animate", results[i].images.fixed_height_small.url)                
                 
                 marvelDiv.append(ratingEl, imageEl);
-                marvelDiv.css({"padding-top": "1vh", "margin-right": "2vw", "clear": "right", "text-align": "center", "font-family": "'Fjalla One', sans-serif", "margin": "2vw", "width": "11vw", "margin-left": "2vw", "float": "left", "color": "white", "background": "red", "filter:": "alpha(opacity=90)", "-moz-opacity": "0.9", "-khtml-opacity": "0.9", "opacity": "0.9"});   
+                marvelDiv.css({"padding-top": "1vh", "margin": "2vw", "clear": "right", "text-align": "center", "font-family": "'Fjalla One', sans-serif", "margin": "2vw", "width": "11vw", "margin-left": "2vw", "float": "left", "color": "white", "background": "red"});   
 
                 $("#giftastic").prepend(marvelDiv);
 
             }   
 
-            $(".marvel-gif").on("click", function() {
-                
-                imageEl.attr("src", results[i].images.fixed_height_small_still.url);
-                imageEl.attr("data-state", "still");
-                imageEl.attr("data-still", results[i].images.fixed_height_small_still.url);
-                imageEl.attr("data-animate", results[i].images.fixed_height_small.url);
+            $(".marvel-gif").on("click", ".gif", function() {
+               
                 var state = $(this).attr("data-state");
                 if (state === "still") {
-                    
-                console.log("gif clicked");
-                   
-                    $(this).attr("src", $(this).attr("animate"));
+                    console.log("gif clicked");
+                    $(this).attr("src", $(this).attr("data-animate"));
                     $(this).attr("data-state", "animate");
                 } else {
                     $(this).attr("src", $(this).attr("data-still"));
@@ -71,7 +65,6 @@ function topic()    {
 }
     $(document).on("click", ".character", gif);  
         
-    
     topic();
 
 
