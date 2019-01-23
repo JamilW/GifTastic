@@ -1,8 +1,11 @@
+// My themed topics listed in array
 var topics = ["Spider-Man", "The Incredible Hulk", "Captain America", "Thor", "Ant Man", "Black Widow", "Iron Man", "Hawkeye", "Wolverine", "Deadpool", "Scarlet Witch", "Doctor Strange", "Silver Surfer", "Luke Cage", "Nick Fury", "Doctor Doom", "Star Lord", "The Punisher", "Daredevil", "Thanos"];
 
+// Overall function to provide app functionality
 function topic()    {
+// Ensures no repeats for buttons
     $("#buttons").empty();
-
+// For loop to render buttons from topic list
         topics.forEach(function(topic)  {
             var button = $("<button>");
             button.addClass("character");  
@@ -12,6 +15,7 @@ function topic()    {
             $(".character").css({"background-color": "red", "padding": "2vh", "font-family": "'Vast Shadow', cursive", "text-align": "center", "margin": "2vh", "color": "white", "border": "white solid 2px"});
     });
 }
+// Function to add another Marvel character button from user input
     $("#add-character").on("click", function(event) {
         event.preventDefault();
         var value = $("#marvel-input").val().trim();
@@ -19,7 +23,11 @@ function topic()    {
         topic();
     });
 
+// Function for rendering gifs on screen upon button click
     function gif()  {
+// Emptying any prior gifs upon clicking on new topic button        
+        $("#giftastic").empty();
+// AJAX to grab API data     
         var topicName = $(this).attr("data-name");
         var queryUrl = "https://api.giphy.com/v1/gifs/search?q=" + topicName + "&apikey=czS0JB7lsbvj3rFAx0UtNP9myRAmTxP6&limit=10";
         $.ajax({
@@ -27,7 +35,7 @@ function topic()    {
             method: "GET"
         }).then(function(response) {
             var results = response.data;
-
+// For loop to assign buttons to array of topics
             for(var i = 0; i < results.length; i++)   {
                 var rating = results[i].rating;
                 var image = results[i].images.fixed_height_small_still.url;
@@ -44,9 +52,8 @@ function topic()    {
                 marvelDiv.css({"padding-top": "1vh", "margin": "2vw", "clear": "right", "text-align": "center", "font-family": "'Fjalla One', sans-serif", "margin": "2vw", "width": "11vw", "margin-left": "2vw", "float": "left", "color": "white", "background": "red"});   
 
                 $("#giftastic").prepend(marvelDiv);
-
             }   
-
+// Get gif to animate upon click and pause upon second click
             $(".marvel-gif").on("click", ".gif", function() {
                
                 var state = $(this).attr("data-state");
@@ -59,14 +66,12 @@ function topic()    {
                     $(this).attr("data-state", "still");
                 }
             });
+// Function for logging AJAX errors to console            
         }).catch(function(error)    {
             console.log(error);
     });
 }
+// Calling functions
     $(document).on("click", ".character", gif);  
         
     topic();
-
-
-
-        

@@ -1,12 +1,15 @@
+/* Property for border and padding */
 * {
     box-sizing: border-box;
 }
+/* Marvel Comics characters image in background */
 html, body    {
     background: url(../images/Marvel-Heroes-Spider-Man-Avengers-Defenders-X-Men.jpg);
     background-repeat: no-repeat;
     background-size: cover 100vh;
     background-color: black;
 }
+/* Buttons for topic names */
 .character    {
     background-color: red;
     padding: 2vh;
@@ -16,6 +19,7 @@ html, body    {
     color: white;
     border: white solid 2px;
 }
+/* Inner div for Marvel form for adding a character */
 #marvel {
     float: right;
     color: white;
@@ -27,12 +31,14 @@ html, body    {
     font-weight: 3vw;
 
 }
+/* Submit button */
 #add-character  {
     background: red;
     color: white;
     font-family: 'Vast Shadow', cursive;
     margin-top: 2vh;
 }
+/* Gifs */
 #marvel-character   {
     float: left;
 }
