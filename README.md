@@ -1,6 +1,6 @@
 ### GifTastic
 
-[!MARVEL.JPG](https://www.wctrib.com/sites/default/files/styles/16x9_620/public/fieldimages/1207/marvellogo.jpg)
+![MARVEL.JPG](https://www.wctrib.com/sites/default/files/styles/16x9_620/public/fieldimages/1207/marvellogo.jpg)
 
 * GifTastic
 
