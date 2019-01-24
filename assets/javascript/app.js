@@ -49,13 +49,12 @@ function topic()    {
                 imageEl.attr("data-animate", results[i].images.fixed_height_small.url)                
                 
                 marvelDiv.append(ratingEl, imageEl);
-                marvelDiv.css({"padding-top": "1vh", "margin": "2vw", "clear": "right", "text-align": "center", "font-family": "'Fjalla One', sans-serif", "margin": "2vw", "width": "11vw", "margin-left": "2vw", "float": "left", "color": "white", "background": "red"});   
+                marvelDiv.css({"padding-top": "1vh", "clear": "right", "text-align": "center", "font-family": "'Fjalla One', sans-serif", "margin": "0 2vw 2vw 0", "width": "11vw", "margin-left": "2vw", "float": "left", "color": "white", "background": "red"});   
 
                 $("#giftastic").prepend(marvelDiv);
             }   
 // Get gif to animate upon click and pause upon second click
             $(".marvel-gif").on("click", ".gif", function() {
-               
                 var state = $(this).attr("data-state");
                 if (state === "still") {
                     console.log("gif clicked");
