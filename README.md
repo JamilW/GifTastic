@@ -1,6 +1,6 @@
 ### GifTastic
 
-![MARVEL.JPG](https://www.wctrib.com/sites/default/files/styles/16x9_620/public/fieldimages/1207/marvellogo.jpg?itok=vN3mrAoF)
+![MARVEL.JPG](https://3b3832722e63ef13df5f-655e11a96f14b2c941c4bc34ef58f583.ssl.cf2.rackcdn.com/product_images_new/TS_Mens_Black_Marvel_Comic_Strip_Logo_T_Shirt_12_99_Print-617-662.jpg)
 
 * GifTastic
 
