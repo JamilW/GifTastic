@@ -9,11 +9,17 @@ html, body    {
     background-size: cover 100vh;
     background-color: black;
 }
+/* Header Marvel Logo */
+img {
+    float: left;
+    margin-top: 15px;
+    margin-left: 20px;
+}
 /* Buttons for topic names */
 .character    {
     background-color: red;
     padding: 2vh;
-    font-family: 'Vast Shadow', cursive;
+    font-family: 'Vast Shadow', cursive;    
     text-align: center;
     margin: 2vh;
     color: white;
@@ -34,11 +40,21 @@ html, body    {
 /* Submit button */
 #add-character  {
     background: red;
-    color: white;
+    color: white;   
     font-family: 'Vast Shadow', cursive;
     margin-top: 2vh;
 }
 /* Gifs */
 #marvel-character   {
-    float: left;
+    
+}
+
+/* Header */
+.header {
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+    background: black;
+    border: 1px solid white;
+    font-family: 'Cinzel', serif;
 }

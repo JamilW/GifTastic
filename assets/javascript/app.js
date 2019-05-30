@@ -47,9 +47,10 @@ function topic()    {
                 imageEl.attr("data-state", "still");
                 imageEl.attr("data-still", results[i].images.fixed_height_small_still.url);
                 imageEl.attr("data-animate", results[i].images.fixed_height_small.url)                
-                
+                // imageE1.css({"font-family": "'Cinzel', serif"});
+
                 marvelDiv.append(ratingEl, imageEl);
-                marvelDiv.css({"padding-top": "1vh", "clear": "right", "text-align": "center", "font-family": "'Fjalla One', sans-serif", "margin": "0 2vw 2vw 0", "width": "11vw", "margin-left": "2vw", "float": "left", "color": "white", "background": "red"});   
+                marvelDiv.css({"padding-top": "1vh", "clear": "right", "text-align": "center", "font-family": "'Cinzel', serif", "margin": "0 2vw 2vw 0", "width": "11vw", "margin-left": "2vw", "float": "left", "color": "white", "box-shadow": "0 20px 20px 15px red"});   
 
                 $("#giftastic").prepend(marvelDiv);
             }   
