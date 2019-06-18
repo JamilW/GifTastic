@@ -13,3 +13,5 @@
 * Under every gif, display its rating (PG, G, so on).
 
 * When the user inputs the name of another Marvel character in the appropriate field, a new character button displays on the screen and will display gif images of that character upon click.
+
+![giphy](https://user-images.githubusercontent.com/43798753/59726732-cc7e5f00-9200-11e9-8675-d52ff91bd7e6.png)
