@@ -45,8 +45,9 @@ img {
     margin-top: 2vh;
 }
 /* Gifs */
-#marvel-character   {
-    
+.marvel-gif   {
+    width: 100px;
+    padding-left: 20px;
 }
 
 /* Header */
@@ -57,4 +58,5 @@ img {
     background: black;
     border: 1px solid white;
     font-family: 'Cinzel', serif;
+    padding-right: 140px;
 }
