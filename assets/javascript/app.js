@@ -1,5 +1,5 @@
 // My themed topics listed in array
-var topics = ["Spider-Man", "The Incredible Hulk", "Captain America", "Thor", "Ant Man", "Black Widow", "Iron Man", "Hawkeye", "Wolverine", "Deadpool", "Scarlet Witch", "Doctor Strange", "Silver Surfer", "Luke Cage", "Nick Fury", "Doctor Doom", "Star Lord", "The Punisher", "Daredevil", "Thanos"];
+var topics = ["Spider-Man", "The Incredible Hulk", "Captain America", "Thor", "Ant Man", "Black Widow", "Iron Man", "Hawkeye", "Wolverine", "Deadpool", "Scarlet Witch", "Doctor Strange", "Thanos", "Silver Surfer", "Luke Cage", "Nick Fury", "Doctor Doom", "Star Lord", "The Punisher", "Daredevil"];
 
 // Overall function to provide app functionality
 function topic()    {

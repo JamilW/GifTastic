@@ -10,6 +10,12 @@ html, body    {
     background-color: black;
 }
 /* Header Marvel Logo */
+#logo   {
+    float: left;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+/* Marvel gif images */
 img {
     float: left;
     margin-top: 15px;
