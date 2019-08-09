@@ -13,7 +13,7 @@ html, body    {
 img {
     float: left;
     margin-top: 15px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 /* Buttons for topic names */
 .character    {
@@ -46,8 +46,8 @@ img {
 }
 /* Gifs */
 .marvel-gif   {
-    width: 100px;
-    padding-left: 20px;
+    width: 20%;
+    /* padding-left: 20px; */
 }
 
 /* Header */
@@ -59,4 +59,8 @@ img {
     border: 1px solid white;
     font-family: 'Cinzel', serif;
     padding-right: 140px;
+}
+/* Marvel character input */
+#marvel-input   {
+    text-transform: capitalize;
 }

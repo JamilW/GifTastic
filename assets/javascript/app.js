@@ -41,8 +41,8 @@ function topic()    {
                 var image = results[i].images.fixed_height_small_still.url;
         
                 var marvelDiv = $("<div class='marvel-gif'>");
-                var ratingEl = $("<p>").text("Rating: " + rating);
-                var imageEl = $("<img height='200' width='200' class='gif'>").attr("src", image);
+                var ratingEl = $("<div id='rating'>").text("Rating: " + rating);
+                var imageEl = $("<img height='220' width='190' class='gif'>").attr("src", image);
 
                 imageEl.attr("data-state", "still");
                 imageEl.attr("data-still", results[i].images.fixed_height_small_still.url);
@@ -50,7 +50,7 @@ function topic()    {
                 // imageE1.css({"font-family": "'Cinzel', serif"});
 
                 marvelDiv.append(ratingEl, imageEl);
-                marvelDiv.css({"padding-top": "1vh", "clear": "right", "text-align": "center", "font-family": "'Cinzel', serif", "margin": "0 2vw 2vw 0", "width": "11vw", "margin-left": "2vw", "float": "left", "color": "white", "box-shadow": "0 20px 20px 15px red"});   
+                marvelDiv.css({"padding-top": "1vh", "clear": "right", "text-align": "center", "font-family": "'Cinzel', serif", "margin": "0 2vw 2vw 0", "width": "15vw", "margin-left": "2vw", "float": "left", "color": "white", "box-shadow": "0 0 15px 5px red"});   
 
                 $("#giftastic").prepend(marvelDiv);
             }   
